@@ -18,7 +18,7 @@ public class AgentDAO {
 	Connection connection;
 	PreparedStatement pst;
 	public String updateAgent(Agent agentNew) throws SQLException, ClassNotFoundException{
-			String cmd = "update agent set name=?, City=?, Gender=?, Maritalstatus=?" + "Premium =? where Agentid=?";
+			String cmd = "update agent set name=?, City=?, Gender=?, Maritalstatus=?", "Premium =? where Agentid=?";
 	connection = ConnectionHelper.getConnection();
 	pst = connection.prepareStatement(cmd);
 	pst.setString(1, agentNew.getName());
